@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <head>
+        {% if title %}
+        <title> {{ title }} - Page </title>
+        {% else %}
+        <title>Welcome to page with no title</title>
+        {% endif %}
+    </head>
+
+    <body>
+        <form method="POST" action="/">
+            {{ form.hidden_tag() }}
+            {{ form.name.label }} {{ form.name(size=20) }}
+            <br/>
+            {{ form.age.label }} {{ form.age(size=3) }}
+            <input type="submit" value="Send some content">
+        </form>
+    </body>
+{% endblock %}

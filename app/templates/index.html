@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Some basic info about the project <br></h1>
+
+ 	<div>Project page is <a href="https://github.com/users/mfedorchuck/projects/1">here</a></div>
+ 	<div>Project repo is <a href="https://github.com/mfedorchuck/data-chef-page">here</a></div>
+ 	<br>
+ 	<div>Current user (you): {{ user.username }}</div>
+ 	<br>
+
+    {% for permission in permissions %}
+    <div><p> <b>{{ permission.username }}</b> permission: {{ permission.body }}</p></div>
+    {% endfor %}
+
+{% endblock %}
