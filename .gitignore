@@ -3,8 +3,15 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# DS Store
+# DS Store / .idea
 *.DS_Store
+.idea/
+
+# temp files
+local_copy.json
+
+# db
+migrations/
 
 # C extensions
 *.so

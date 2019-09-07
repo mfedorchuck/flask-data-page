@@ -10,12 +10,23 @@
     </head>
 
     <body>
-        <form method="POST" action="/">
-            {{ form.hidden_tag() }}
-            {{ form.name.label }} {{ form.name(size=20) }}
-            <br/>
-            {{ form.age.label }} {{ form.age(size=3) }}
-            <input type="submit" value="Send some content">
+        <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.post.label }}<br>
+            {{ form.post(cols=32, rows=4) }}<br>
+            {% for error in form.post.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
         </form>
+
+        {% if form %}
+        <form action="" method="post">
+            ...
+        </form>
+        {% endif %}
+
     </body>
 {% endblock %}
