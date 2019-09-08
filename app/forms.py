@@ -26,6 +26,6 @@ class MultiPostForm(FlaskForm):
     category = StringField('Category', validators=[DataRequired()])
     userCase = StringField('User Case', validators=[DataRequired()])
 
-    text = TextAreaField('', validators=[DataRequired(), Length(min=1, max=5000)])
+    text = TextAreaField('Article text', validators=[DataRequired(), Length(min=1, max=5000)])
 
     submit = SubmitField('Submit')
