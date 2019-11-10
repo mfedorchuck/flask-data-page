@@ -1,47 +1,52 @@
 {% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
 
 {% block content %}
+    <div class="col-lg-8">
     <h1>Some basic info about the project <br></h1>
 
  	<div>
- 		Project task board is 
- 		<a href="https://github.com/mfedorchuck/data-chef-page/projects/1">here</a>
- 	</div>
-
- 	<div>
- 		Project repo is <a href="https://github.com/mfedorchuck/data-chef-page">here</a>
- 	</div>
-
-
-    <form action="" method="post">
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.post.label }}<br>
-            {{ form.post(cols=32, rows=4) }}<br>
-            {% for error in form.post.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>{{ form.submit() }}</p>
-    </form>
-
-    {% if form %}
-    <form action="" method="post">
-        ...
-    </form>
-    {% endif %}
-
-
- 	<br>
- 	<div>Current user (you): {{ user.username }}</div>
- 	<br>
-
-    {% for permission in permissions %}
-    <div>
-        <p> <b>{{ permission.username }}</b> permission: {{ permission.body }}</p>
-        <p>{% include '_post.html' %}</p>
+        Project task board
+        <a href="https://github.com/mfedorchuck/data-chef-page/projects/1">here</a>
     </div>
 
-    {% endfor %}
+ 	<div>
+ 		Project repo <a href="https://github.com/mfedorchuck/data-chef-page">here</a>
+ 	</div>
+
+    </div>
+
+{##}
+{#    <form action="" method="post">#}
+{#        {{ form.hidden_tag() }}#}
+{#        <p>#}
+{#            {{ form.post.label }}<br>#}
+{#            {{ form.post(cols=32, rows=4) }}<br>#}
+{#            {% for error in form.post.errors %}#}
+{#            <span style="color: red;">[{{ error }}]</span>#}
+{#            {% endfor %}#}
+{#        </p>#}
+{#        <p>{{ form.submit() }}</p>#}
+{#    </form>#}
+{##}
+{#    {% if form %}#}
+{#    <form action="" method="post">#}
+{#        ...#}
+{#    </form>#}
+{#    {% endif %}#}
+{##}
+{##}
+{# 	<br>#}
+{# 	<div>Current user (you): {{ user.username }}</div>#}
+{# 	<br>#}
+{##}
+{#    {% for permission in permissions %}#}
+{#    <div>#}
+{#        <p> <b>{{ permission.username }}</b> permission: {{ permission.body }}</p>#}
+{#        <p>{% include '_post.html' %}</p>#}
+{#    </div>#}
+{##}
+{#    {% endfor %}#}
 
 {% endblock %}

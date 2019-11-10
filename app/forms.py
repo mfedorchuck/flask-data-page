@@ -29,3 +29,9 @@ class MultiPostForm(FlaskForm):
     text = TextAreaField('Article text', validators=[DataRequired(), Length(min=1, max=5000)])
 
     submit = SubmitField('Submit')
+
+
+class PostForm(FlaskForm):
+    post = TextAreaField('Say something', validators=[
+        DataRequired(), Length(min=1, max=140)])
+    submit = SubmitField('Submit')

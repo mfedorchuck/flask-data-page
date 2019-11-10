@@ -18,6 +18,4 @@ class UserData:
         with open('local_copy.json', 'w') as f:
             json.dump(json_obj, f)
 
-        print('Done Done Done')
-
         return 'data saved!'

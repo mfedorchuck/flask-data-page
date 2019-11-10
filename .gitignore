@@ -9,6 +9,7 @@ __pycache__/
 
 # temp files
 local_copy.json
+*.json
 
 # db
 migrations/
