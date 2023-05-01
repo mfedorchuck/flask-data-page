@@ -3,7 +3,7 @@ boto3==1.9.222
 botocore==1.12.222
 Click==7.0
 docutils==0.15.2
-Flask==1.1.1
+Flask==2.3.2
 Flask-Migrate==2.5.2
 Flask-SQLAlchemy==2.4.0
 Flask-WTF==0.14.2
